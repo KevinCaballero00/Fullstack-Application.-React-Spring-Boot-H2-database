@@ -29,7 +29,7 @@ public class NotaController {
     }
 
     //Actualizar una nota existente
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public Nota actualizarNota(@PathVariable Long id, @RequestBody Nota notaDetalles){
         Optional<Nota> optionalNota = notaRepository.findById(id);
 
